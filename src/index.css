@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+
+.line{
+    animation: line_animation 5s infinite;
+}
+
+@keyframes line_animation {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 50;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.parent_card{
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+
+.child_card{
+    width:0%;
+    transition: all .6s ease-in-out;
+}
+.parent_card:hover .child_card{
+    width: 100%;
+    background-color: rgb(231, 94, 25);
+}
+
+.brand_list{
+    position: absolute;
+    left: 0;
+   animation: list_animation 1s infinite;
+}
+
+@keyframes list_animation {
+    0%{
+        left: -100px;
+    }
+    50%{
+        left:0px
+    }
+    100%{
+        left: -100px;
+    }
+}
+
+.icon_animation{
+    animation:icon_bounce 2s infinite ;
+}
+
+@keyframes icon_bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.menu_icon{
+    transition: all 1s ease;
+}
